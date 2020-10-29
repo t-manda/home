@@ -1,1 +1,138 @@
-hello Manda's home!
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./analyze.js"></script>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <title>ケモ謎 回答チェック</title>
+  </head>
+  <body>
+    <h1>ケモ謎 回答チェック</h1>
+    <div class="row">
+      <div class="col-xl-6 col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">使い方</h5>
+            <p class="card-text">
+              1.<a
+                href="https://script.googleusercontent.com/macros/echo?user_content_key=smH8EK0gBacGPWN0YGVC4vJhYfMu1YndLcfONvLnva8h36q2UDGSXAq_UmYmWQ7-g2fVrl1qNH86tW7-JFNQDQLzp6Ohyy78m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMxd7jAwRxWOcmejfIoChdDrokl_bsFpjQjOB9Nyvijs0BcEIvICfs5LEout0LlqVEWY2nZ7HPw5&lib=MiknC3HRAvizzmGSSk54aXN-ogQrA5nHA"
+                target="_blank"
+                >ココ</a
+              >からテキストデータを取得，全て選択してコピー．
+            </p>
+            <p class="card-text">
+              2.解答データにペーストし，選択肢表示をタップ．
+            </p>
+            <p class="card-text">
+              3.正解の選択肢にチェックを入れて，データ表示をタップ
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">各種リンク</h5>
+            <p class="card-text">
+              元データリンク：<a
+                href="https://script.googleusercontent.com/macros/echo?user_content_key=smH8EK0gBacGPWN0YGVC4vJhYfMu1YndLcfONvLnva8h36q2UDGSXAq_UmYmWQ7-g2fVrl1qNH86tW7-JFNQDQLzp6Ohyy78m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMxd7jAwRxWOcmejfIoChdDrokl_bsFpjQjOB9Nyvijs0BcEIvICfs5LEout0LlqVEWY2nZ7HPw5&lib=MiknC3HRAvizzmGSSk54aXN-ogQrA5nHA"
+                target="_blank"
+                >ココ</a
+              >
+            </p>
+            <p class="card-text">
+              共有：<a
+                href="https://docs.google.com/document/d/1cNHMnoXakEa4qCC667OkgCl1669dbBHPjUmFYiFBC6g/edit"
+                target="_blank"
+                >ココ</a
+              >．
+            </p>
+            <p class="card-text">
+              Twitter：<a
+                href="https://twitter.com/KemoNazo_BeasT"
+                target="_blank"
+                >ココ</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-xl-6 col-md-12">
+        <div class="card">
+          <div class="card-body overflow-auto">
+            <a
+              class="twitter-timeline"
+              data-lang="ja"
+              data-height="300"
+              href="https://twitter.com/KemoNazo_BeasT?ref_src=twsrc%5Etfw"
+              >Tweets by KemoNazo_BeasT</a
+            >
+          </div>
+        </div>
+      </div> -->
+      <div class="col-xl-6 col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">解答分析</h5>
+            <p class="card-text">
+              解答データ：<input type="text" id="textbox" />
+            </p>
+            <p class="card-text">集計範囲</p>
+            <p class="card-text">
+              <input type="date" , id="start" /> 20:00:00 ～
+              <input type="date" , id="end" /> 20:00:00<br />
+            </p>
+  
+            <p class="card-text">
+              <input type="button" value="選択肢表示" onclick="Selection();" />
+            </p>
+  
+            <p class="card-text"><div id="output"></div></p>
+  
+            <p class="card-text"><input type="button" value="結果表示" onclick="showcheck();" /></p>
+  
+            <p class="card-text">
+              <div id="copy"></div>
+            </p>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+  </body>
+</html>
