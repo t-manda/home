@@ -131,14 +131,18 @@ function Selection() {
   var elem = document.getElementById('output');
   for (var i = 0; i < selectList_dup.length; i++) {
     var chkboxstr =
-      '<input type="checkbox" name="genre" value="0' +
+      '<label for="' +
+      i +
+      '"><input type="checkbox" name="genre" id="' +
+      i +
+      '" value="0' +
       i +
       '">' +
       selectList_dup[i] +
       '(' +
       counts[selectList_dup[i]] +
       ')' +
-      '<br>';
+      '</label><br>';
     elem.insertAdjacentHTML('beforeend', chkboxstr);
     //   selectList_dup[i] +
     //   '" id="+
@@ -425,3 +429,48 @@ String.prototype.bytes = function () {
   }
   return length;
 };
+
+function checkAPI() {
+  url =
+    'https://script.googleusercontent.com/macros/echo?user_content_key=smH8EK0gBacGPWN0YGVC4vJhYfMu1YndLcfONvLnva8h36q2UDGSXAq_UmYmWQ7-g2fVrl1qNH86tW7-JFNQDQLzp6Ohyy78m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMxd7jAwRxWOcmejfIoChdDrokl_bsFpjQjOB9Nyvijs0BcEIvICfs5LEout0LlqVEWY2nZ7HPw5&lib=MiknC3HRAvizzmGSSk54aXN-ogQrA5nHA';
+
+  // XMLHttpRequestオブジェクトの作成
+  var request = new XMLHttpRequest();
+
+  // URLを開く
+  request.open('GET', url, false);
+
+  // レスポンスが返ってきた時の処理を記述
+  request.onload = function () {
+    // レスポンスが返ってきた時の処理
+    var data = this.response;
+    console.log(data);
+  };
+
+  // リクエストをURLに送信
+  request.send();
+}
+
+//APIからテキストを取りたい
+function checkAPI() {
+  const auth = gapi.auth2.getAuthInstance();
+  auth.signIn();
+  url =
+    'https://script.googleusercontent.com/macros/echo?user_content_key=smH8EK0gBacGPWN0YGVC4vJhYfMu1YndLcfONvLnva8h36q2UDGSXAq_UmYmWQ7-g2fVrl1qNH86tW7-JFNQDQLzp6Ohyy78m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMxd7jAwRxWOcmejfIoChdDrokl_bsFpjQjOB9Nyvijs0BcEIvICfs5LEout0LlqVEWY2nZ7HPw5&lib=MiknC3HRAvizzmGSSk54aXN-ogQrA5nHA';
+
+  // XMLHttpRequestオブジェクトの作成
+  var request = new XMLHttpRequest();
+
+  // URLを開く
+  request.open('GET', url, false);
+
+  // レスポンスが返ってきた時の処理を記述
+  request.onload = function () {
+    // レスポンスが返ってきた時の処理
+    var data = this.response;
+    console.log(data);
+  };
+
+  // リクエストをURLに送信
+  request.send();
+}
