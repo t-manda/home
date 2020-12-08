@@ -1,0 +1,13 @@
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jumbotron {
+  height: 95%;
+}
+
+.btn {
+  position: absolute;
+  bottom: 5%;
+}
