@@ -16,7 +16,7 @@
       </div>
     </a>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 sticky-top">
       <a class="navbar-brand" href="./">Manda Page</a>
       <button
         class="navbar-toggler"
@@ -32,18 +32,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="./home.html">Home </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./links.html"
-              >Links <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="./intro.html">Intro</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="./links.html">Links</a>
           </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li> -->
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
+        <!-- <form class="form-inline mt-2 mt-md-0">
           <input
             class="form-control mr-sm-2"
             type="text"
@@ -53,7 +51,7 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Search
           </button>
-        </form>
+        </form> -->
       </div>
     </nav>
 
@@ -62,63 +60,85 @@
       <div class="row row-eq-height">
         <div class="col-md-6 col-xl-4">
           <div class="jumbotron">
-            <h1>チュウニのキャラ1</h1>
-            <img src="./img/cr6.png" class="col img-responsive center-block" />
-            <p class="lead">
-              犬のキャラ，曲はムズイ
-            </p>
-            <a
-              class="btn btn-lg btn-primary"
-              href="https://chunithm.sega.jp/character/#/chunithm-crystal/%E3%83%91%E3%83%88%E3%83%AA%E3%82%AA%E3%83%83%E3%83%88"
-              role="button"
-              >詳細はこちら &raquo;</a
-            >
-          </div>
-        </div>
-        <div class="col-md-6 col-xl-4">
-          <div class="jumbotron">
-            <h1>いらすとやさん</h1>
+            <h1>FigMap4SC</h1>
             <img
-              src="./img/review_woman_star5.png"
+              src="./img/figmap_01.png"
               class="col img-responsive center-block"
             />
             <p class="lead">
-              評価が高いです
-            </p>
-            <a
-              class="btn btn-lg btn-primary"
-              href="https://www.irasutoya.com/"
-              role="button"
-              >詳細はこちら &raquo;</a
-            >
-          </div>
-        </div>
-        <div class="col-md-6 col-xl-4">
-          <div class="jumbotron">
-            <h1>FigMap4SC</h1>
-            <img src="./img/map.jpg" class="col img-responsive center-block" />
-            <p class="lead">
-              データをアップロードすると，自動的に地図に色付けできるサービス．</br>
-              現在は神戸市のみ利用できます．
+              データをアップロードすると、自動的に地図に色付けできるWebサービス。<br />
+              テンプレートを利用したエクセルデータのほか、API経由でのデータ投入にも対応。<br />
+              現在は神戸市のみ可視化出来ます。
             </p>
             <a
               class="btn btn-lg btn-primary"
               href="https://wsapp.cs.kobe-u.ac.jp/FigMap4SC/"
               role="button"
-              >アプリ画面へ &raquo;</a
+              >サービスへ &raquo;</a
             >
           </div>
         </div>
+
         <div class="col-md-6 col-xl-4">
           <div class="jumbotron">
-            <h1>FigMap4SC</h1>
-            <img src="./img/map.jpg" class="col img-responsive center-block" />
+            <h1>Predict Heat Stroke</h1>
+            <img
+              src="./img/heat_01.png"
+              class="col img-responsive center-block"
+            />
             <p class="lead">
-              こんな研究をしています
+              神戸市を対象に、1日の熱中症搬送者数を予測するWebサービス。<br />
+              天気予報より、今日と明日の熱中症者数を表示します。<br />
+              最高気温・最低湿度・前日の最高気温・天気を入力することで、任意の予測を簡単に行えます。
             </p>
-            <a class="btn btn-lg btn-primary" href="" role="button"
-              >今はリンクを張ってないよ！ &raquo;</a
+            <a
+              class="btn btn-lg btn-primary"
+              href="https://wsapp.cs.kobe-u.ac.jp/webapps/heatstroke_prediction/"
+              role="button"
+              >サービスへ &raquo;</a
             >
+            ※Id/Passwordは、メール又は携帯電話にご連絡ください<br />
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="jumbotron">
+            <h1>こねくと・あーち</h1>
+            <img
+              src="./img/arch_01.png"
+              class="col img-responsive center-block"
+            />
+            <p class="lead">
+              子育て支援施設「<a
+                href="http://www2.kobe-u.ac.jp/~zda/arch-prep.html"
+                >のびやかスペース あーち</a
+              >」利用予約を行うWebサービス。<br />
+              施設を利用するための予約をオンラインで行えます。<br />
+              また、メールの自動返信、特別なイベントの作成など、管理者側のメニューも作成しています。<br />
+            </p>
+            <a
+              class="btn btn-lg btn-primary"
+              href="https://wsapp.cs.kobe-u.ac.jp/connectArch/"
+              role="button"
+              >サービスへ &raquo;</a
+            >
+            ※このサービスは、神戸大学ITスペシャリスト養成コースの一環で作成しています<br />
+            ※(2021年1月現在)サービス開発段階のため、実際に運用されていません。
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="jumbotron">
+            <h1>MPS(Manda Payment Service)</h1>
+            <img
+              src="./img/mps_01.jpeg"
+              class="col img-responsive center-block"
+            />
+            <p class="lead">
+              当研究室で利用できるプリペイド式非接触型決済サービス。<br />
+              事前に登録・チャージすることで、好きなカードを利用出来ます。<br />
+              決済時には効果音と共に、残高を合成音声で案内します。<br />
+            </p>
           </div>
         </div>
       </div>
